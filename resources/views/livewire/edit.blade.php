@@ -1,6 +1,6 @@
 <div>
     <a href="/">Back</a>
-    <h1>Create</h1>
+    <h1>Edit</h1>
     <form wire:submit.prevent='updateData'>
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
