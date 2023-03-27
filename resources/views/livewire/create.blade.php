@@ -1,7 +1,7 @@
 <div>
     <a href="/">Back</a>
     <h1>Create</h1>
-    <form wire:submit.prevent='createStudent'>
+    <form wire:submit.prevent='createStudent()'>
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" wire:model='name'>
@@ -40,5 +40,7 @@
         @endif
         <button type="submit" class="btn btn-primary" turbolinks.visit('/')>Submit</button>
     </form>
+
+    <livewire:modals.my-example-modal />
 
 </div>

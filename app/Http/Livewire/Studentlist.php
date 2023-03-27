@@ -76,4 +76,12 @@ class Studentlist extends Component
     {
         $this->studentsInPage = $this->students->pluck('id')->toArray();
     }
+
+    public function storeShow($data)
+    {
+        // Mengirim Data Ke database
+
+        // Melakukan Show
+        $this->emit('showModal', $data);
+    }
 }

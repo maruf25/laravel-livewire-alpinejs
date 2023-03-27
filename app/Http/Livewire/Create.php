@@ -26,6 +26,7 @@ class Create extends Component
         $this->reset('section_id');
     }
 
+    //Dengan Menggunakan Modal
     public function createStudent()
     {
         Students::create([
@@ -36,8 +37,11 @@ class Create extends Component
             'class_id' => $this->selectClass,
             'section_id' => $this->section_id,
         ]);
+
+        $studentLast = Students::latest()->first();
         // return redirect()->to('/')->with('success', 'data berhasil disimpan');
         // turbolinks . visit('/');
-        return redirect(route('home'))->with('success', 'data berhasil disimpan');
+        $this->emit('showModal', $studentLast);
+        // return redirect(route('home'))->with('success', 'data berhasil disimpan');
     }
 }

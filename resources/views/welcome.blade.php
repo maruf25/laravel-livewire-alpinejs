@@ -25,13 +25,17 @@
 </head>
 
 <body class="antialiased">
-    <div class="container">
-        <div class="row mt-5">
+    {{-- <div class="container">
+       <div class="row mt-5">
             <div class="col-md-12">
                 <livewire:studentlist />
             </div>
         </div>
-    </div>
+    </div> --}}
+
+    <button class="btn btn-primary btn-lg" type="button" wire:click.prevent="$emit('showModal')">Open Modal</button>
+
+    <livewire:modals.my-example-modal />
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

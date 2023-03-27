@@ -170,6 +170,11 @@
         </table>
     </div>
 
+    <button class="btn btn-primary btn-lg" type="button" wire:click.prevent="storeShow('Data Terkirim')">Open
+        Modal</button>
+
+    <livewire:modals.my-example-modal />
+
     <div class="row mt-4">
         <div class="col-sm-6 offset-5">
             {{ $students->links() }}
